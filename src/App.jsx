@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import './App.css'
 import LoveFortune from './LoveFortune'
-import QRCodePage from './QRCodePage'
 
 const siamsiData = {
   1: {
@@ -121,7 +120,7 @@ const siamsiData = {
 function App() {
   const [selectedNumber, setSelectedNumber] = useState(null)
   const [isShaking, setIsShaking] = useState(false)
-  const [currentPage, setCurrentPage] = useState('general') // 'general', 'love', or 'qr'
+  const [currentPage, setCurrentPage] = useState('general') // 'general' or 'love'
 
   const handleNumberClick = (num) => {
     setIsShaking(true)
@@ -133,11 +132,6 @@ function App() {
 
   const closeModal = () => {
     setSelectedNumber(null)
-  }
-
-  // แสดงหน้า QR Code
-  if (currentPage === 'qr') {
-    return <QRCodePage onBack={() => setCurrentPage('general')} />
   }
 
   // แสดงหน้าเซียมซีความรัก
@@ -158,24 +152,6 @@ function App() {
       <div className="lantern lantern-right"></div>
 
       <div className="container">
-        {/* ปุ่ม QR Code */}
-        <button 
-          className="qr-button"
-          onClick={() => setCurrentPage('qr')}
-          title="แสดง QR Code"
-        >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <rect x="3" y="3" width="8" height="8" stroke="currentColor" strokeWidth="2"/>
-            <rect x="3" y="13" width="8" height="8" stroke="currentColor" strokeWidth="2"/>
-            <rect x="13" y="3" width="8" height="8" stroke="currentColor" strokeWidth="2"/>
-            <rect x="16" y="16" width="2" height="2" fill="currentColor"/>
-            <rect x="13" y="13" width="2" height="2" fill="currentColor"/>
-            <rect x="19" y="13" width="2" height="2" fill="currentColor"/>
-            <rect x="13" y="19" width="2" height="2" fill="currentColor"/>
-            <rect x="19" y="19" width="2" height="2" fill="currentColor"/>
-          </svg>
-        </button>
-
         <div className="header">
           <div className="crystal-ball"></div>
           <h1 className="title">เซียมซีทั่วไป</h1>
