@@ -1,0 +1,28 @@
+/* 
+  สำคัญ: ต้องเพิ่ม meta viewport ใน index.html เพื่อให้ responsive ทำงานได้ดี
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Charm:wght@400;700&display=swap');
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Sarabun', system-ui, -apple-system, sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+}
