@@ -716,13 +716,6 @@ body {
   .type-btn {
     width: 200px;
   }
-  
-  .qr-button {
-    width: 45px;
-    height: 45px;
-    top: 15px;
-    right: 15px;
-  }
 }
 
 @media (max-width: 480px) {
@@ -797,16 +790,6 @@ body {
   .type-btn {
     padding: 12px 25px;
     font-size: 1rem;
-  }
-  
-  .qr-button {
-    width: 40px;
-    height: 40px;
-  }
-  
-  .qr-button svg {
-    width: 20px;
-    height: 20px;
   }
 }
 
